@@ -1,0 +1,138 @@
+/* Footer Animations */
+.footer {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated underline effect for links */
+.footer ul li a {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.footer ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 0;
+    background-color: var(--primary);
+    transition: width 0.3s ease;
+}
+
+.footer ul li a:hover::after {
+    width: 100%;
+}
+
+/* Social links hover animation */
+.footer .social-links a {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.footer .social-links a:hover {
+    transform: translateY(-5px) rotate(8deg);
+    background: var(--primary);
+}
+
+/* Quick Contact button animation */
+.footer .btn-primary {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.footer .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: all 0.5s ease;
+}
+
+.footer .btn-primary:hover::before {
+    left: 100%;
+}
+
+/* Section headings animation */
+.footer h4, .footer h5 {
+    position: relative;
+    animation: slideInLeft 0.5s ease-out forwards;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Footer divider line animation */
+.footer hr {
+    position: relative;
+    overflow: hidden;
+}
+
+.footer hr::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        var(--primary) 50%, 
+        transparent 100%
+    );
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Copyright text fade-in animation */
+.footer .copyright {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive animations */
+@media (max-width: 768px) {
+    .footer h4, .footer h5 {
+        animation: slideInTop 0.5s ease-out forwards;
+    }
+
+    @keyframes slideInTop {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+} 

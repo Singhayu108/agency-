@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - ITRAM MANAGEMENT</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="lib/fontawesome/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="lib/fonts/poppins.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="lib/aos/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <!--
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/RAM.png" alt="ITRAM Logo" height="40" class="me-2">
+              
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    -->
+    <!-- Header will be dynamically inserted by header-loader.js -->
+
+    <!-- Hero Section -->
+    <section class="hero py-5 mt-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h1 class="display-4 fw-bold mb-4">Get in Touch</h1>
+                    <p class="lead">Have a question or want to work with us? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Contact Information -->
+                <div class="col-lg-4">
+                    <div class="contact-info p-4 p-lg-5">
+                        <h4 class="mb-4">Get in Touch</h4>
+                        <p class="mb-4">Have a project in mind or want to learn more about our services? We'd love to hear from you.</p>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fas fa-map-marker-alt fa-2x text-primary me-3"></i>
+                            <div>
+                                <h6 class="mb-1">Our Location</h6>
+                                <p class="mb-0">WADALA, MUMUBAI, MAHARASHTRA, INDIA , 400037</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fas fa-phone fa-2x text-primary me-3"></i>
+                            <div>
+                                <h6 class="mb-1">Phone Number</h6>
+                                <p class="mb-0">+91 8268200329</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <i class="fas fa-envelope fa-2x text-primary me-3"></i>
+                            <div>
+                                <h6 class="mb-1">Email Address</h6>
+                                <p class="mb-0">itrammanagement@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <h6 class="mb-3">Follow Us</h6>
+                        <div class="social-links mt-3">
+                            <a href="#" class="text-light me-3" aria-label="LinkedIn">
+                                <img src="images/icons/linkedin.png" alt="LinkedIn" width="24" height="24">
+                            </a>
+                            <a href="#" class="text-light me-3" aria-label="GitHub">
+                                <img src="images/icons/github.png" alt="GitHub" width="24" height="24">
+                            </a>
+                            <a href="#" class="text-light me-3" aria-label="Instagram">
+                                <img src="images/icons/instagram (1).png" alt="Instagram" width="24" height="24">
+                            </a>
+                            <a href="mailto:itrammanagement@gmail.com" class="text-light" aria-label="Email">
+                                <img src="images/icons/gmail.png" alt="Email" width="24" height="24">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="col-lg-8">
+                    <div class="contact-form p-4 bg-light rounded" data-aos="fade-left">
+                        <h4 class="mb-4">Send Us a Message</h4>
+                        <form id="contactForm" action="https://formspree.io/f/mjkwqkza" method="POST" class="needs-validation" novalidate>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Your Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" placeholder="FULL NAME" required>
+                                    <div class="invalid-feedback">Please enter your name.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="XYZ@example.com" required>
+                                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Phone Number</label>
+                                    <input type="tel" class="form-control" id="phone" name="phone" placeholder="+91 8268200329">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="subject" class="form-label">Subject</label>
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="How can we help?" required>
+                                    <div class="invalid-feedback">Please enter a subject.</div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Your Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="5" placeholder="Tell us about your project..." required></textarea>
+                                    <div class="invalid-feedback">Please enter your message.</div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="privacy" name="privacy-accepted" required>
+                                        <label class="form-check-label" for="privacy">
+                                            I agree to the <a href="#" style="color: #ff6b00;">privacy policy</a> and consent to being contacted about my inquiry.
+                                        </label>
+                                        <div class="invalid-feedback">You must agree before submitting.</div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="map-container rounded shadow-sm" data-aos="fade-up">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.3811925347945!2d77.61631187381561!3d13.012714513826422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17b5f0b6c4f1%3A0x9c5a2c67c901c6d!2sITRAM%20MANAGEMENT!5e0!3m2!1sen!2sin!4v1704471462611!5m2!1sen!2sin"
+                            width="100%" 
+                            height="450" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Scripts -->
+    <script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="lib/aos/aos.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/header-loader.js"></script>
+    <script src="js/footer-loader.js"></script>
+</body>
+</html> 

@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITRAM MANAGEMENT - Home</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header Start -->
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .navbar {
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+        }
+        .navbar.scrolled {
+            background-color: var(--bs-dark) !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .nav-link {
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            transition: all 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .nav-link:hover {
+            color: #ff6b00 !important;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 1rem;
+            right: 1rem;
+            height: 2px;
+            background-color: #ff6b00;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            transform: scaleX(1);
+        }
+        .navbar-toggler {
+            border: none;
+            padding: 0.5rem;
+        }
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        @media (max-width: 991.98px) {
+            .navbar-collapse {
+                background-color: var(--bs-dark);
+                padding: 1rem;
+                border-radius: 8px;
+                margin-top: 1rem;
+            }
+        }
+    </style>
+    <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/RAM.png" alt="ITRAM Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                            <a class="nav-link" href="index.html">
+                                <i class="bi bi-house-door"></i> Home
+                            </a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="about.html">
+                                <i class="bi bi-info-circle"></i> About
+                            </a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="services.html">
+                                <i class="bi bi-gear"></i> Services
+                            </a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="projects.html">
+                                <i class="bi bi-briefcase"></i> Projects
+                            </a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="team.html">
+                                <i class="bi bi-people"></i> Team
+                            </a>
+                    </li>
+                    <li class="nav-item">
+                            <a class="nav-link" href="contact.html">
+                                <i class="bi bi-envelope"></i> Contact
+                            </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    </header>
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+    <!-- Header End -->
+
+    <!-- Main Content -->
+    <!-- Header will be dynamically inserted by header-loader.js -->
+
+    <!-- Hero Section -->
+    <section class="hero min-vh-100 d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold mb-4">Crafting Future-Ready Digital Solutions</h1>
+                    <p class="lead mb-4">Transform your business with cutting-edge web development and IT solutions. We help businesses innovate and grow in the digital age.</p>
+                    <div class="d-flex gap-3">
+                        <a href="contact.html" class="btn btn-primary btn-lg">Get Started</a>
+                        <a href="services.html" class="btn btn-outline-primary btn-lg">Our Services</a>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="images/homepage.png" alt="Digital Solutions" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Preview Section -->
+    <section class="about py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="images/about.png" alt="About Us" class="img-fluid">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <h6 class="text-primary fw-bold">ABOUT US</h6>
+                    <h2 class="display-5 fw-bold mb-4">We Create Digital Solutions For Your Business Growth</h2>
+                    <p class="lead mb-4">ITRAM MANAGEMENT is a leading tech agency specializing in web development and IT solutions. We help businesses transform their digital presence with cutting-edge technology and innovative solutions.</p>
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-2"></i>
+                                <span>Custom Web Development</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-2"></i>
+                                <span>IT Consulting Services</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-2"></i>
+                                <span>Digital Transformation</span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center">
+                                <i class="fas fa-check-circle text-primary me-2"></i>
+                                <span>24/7 Tech Support</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-primary btn-lg">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Preview Section -->
+    <section class="services py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h6 class="text-primary fw-bold">OUR SERVICES</h6>
+                    <h2 class="display-5 fw-bold mb-4">What We Do Best</h2>
+                    <p class="lead">We offer a comprehensive range of IT and web development services to help your business thrive in the digital age.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Service Preview Cards -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 hover-lift" data-aos="fade-up">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white rounded-3 mb-3">
+                                <i class="fas fa-code fa-2x p-3"></i>
+                            </div>
+                            <h4 class="mb-3">Web Development</h4>
+                            <p class="mb-4">Custom websites and web applications built with the latest technologies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 hover-lift" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white rounded-3 mb-3">
+                                <i class="fas fa-mobile-alt fa-2x p-3"></i>
+                            </div>
+                            <h4 class="mb-3">Mobile Apps</h4>
+                            <p class="mb-4">Native and cross-platform mobile applications for iOS and Android.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 hover-lift" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white rounded-3 mb-3">
+                                <i class="fas fa-cloud fa-2x p-3"></i>
+                            </div>
+                            <h4 class="mb-3">Cloud Solutions</h4>
+                            <p class="mb-4">Cloud infrastructure setup, migration, and management services.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="services.html" class="btn btn-primary btn-lg">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Preview Section -->
+    <section class="projects py-5">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h6 class="text-primary fw-bold">OUR PROJECTS</h6>
+                    <h2 class="display-5 fw-bold mb-4">Featured Work</h2>
+                    <p class="lead">Take a look at some of our recent projects that showcase our expertise and creativity.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Project Card 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card h-100 border-0 shadow-lg" data-aos="fade-up" data-bs-toggle="modal" data-bs-target="#projectModal1" style="cursor: pointer;">
+                        <div class="position-relative overflow-hidden">
+                            <img src="images/weg.png" alt="CPL SPORTS T11" class="card-img-top">
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <div class="project-content text-center p-4">
+                                    <button class="btn btn-primary btn-lg rounded-pill">Explore Solution</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <span class="badge bg-primary px-3 py-2 rounded-pill">Enterprise Sports Platform</span>
+                                <small class="text-muted fw-bold">2024</small>
+                            </div>
+                            <h4 class="card-title mb-3 fw-bold">CPL SPORTS T11</h4>
+                            <p class="card-text mb-4 text-muted">Advanced sports event management ecosystem connecting elite players with professional coaches across India's sporting landscape.</p>
+                            <div class="tech-stack mb-4">
+                                <h6 class="text-primary mb-3">Technology Excellence</h6>
+                                <span class="badge bg-light text-primary mb-2">Flutter Pro</span>
+                                <span class="badge bg-light text-primary mb-2">PHP 8.2</span>
+                                <span class="badge bg-light text-primary mb-2">Laravel</span>
+                                <span class="badge bg-light text-primary mb-2">Bootstrap 5</span>
+                            </div>
+                            <div class="solution-type mt-3">
+                                <p class="text-primary mb-1">Project Type</p>
+                                <p class="fw-bold mb-0">WEB APP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card project-card h-100 border-0 shadow-lg" data-aos="fade-up" data-aos-delay="100" data-bs-toggle="modal" data-bs-target="#projectModal2" style="cursor: pointer;">
+                        <div class="position-relative overflow-hidden">
+                            <img src="images/ANYTIME OTT.png" alt="ANYTIME OTT" class="card-img-top">
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <div class="project-content text-center p-4">
+                                    <button class="btn btn-primary btn-lg rounded-pill">Explore Solution</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <span class="badge bg-primary px-3 py-2 rounded-pill">Premium Entertainment Suite</span>
+                                <small class="text-muted fw-bold">2024</small>
+                            </div>
+                            <h4 class="card-title mb-3 fw-bold">ANYTIME OTT</h4>
+                            <p class="card-text mb-4 text-muted">Next-generation digital entertainment ecosystem featuring premium streaming, music, and interactive content for India's diverse audience.</p>
+                            <div class="tech-stack mb-4">
+                                <h6 class="text-primary mb-3">Technology Excellence</h6>
+                                <span class="badge bg-light text-primary mb-2">Flutter Pro</span>
+                                <span class="badge bg-light text-primary mb-2">PHP 8.2</span>
+                                <span class="badge bg-light text-primary mb-2">Laravel</span>
+                                <span class="badge bg-light text-primary mb-2">Bootstrap 5</span>
+                            </div>
+                            <div class="solution-type mt-3">
+                                <p class="text-primary mb-1">Project Type</p>
+                                <p class="fw-bold mb-0">Android App</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="col-md-6 col-lg-4" data-category="cloud">
+                    <div class="card project-card h-100 border-0 shadow-lg" data-aos="fade-up" data-aos-delay="200" data-bs-toggle="modal" data-bs-target="#projectModal3" style="cursor: pointer;">
+                        <div class="position-relative overflow-hidden">
+                            <img src="images/LEAVE APPLICATION.png" alt="Leave Application System" class="card-img-top">
+                            <div class="project-overlay d-flex align-items-center justify-content-center">
+                                <div class="project-content text-center p-4">
+                                    <button class="btn btn-primary btn-lg rounded-pill">Explore Solution</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body p-4">
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <span class="badge bg-primary px-3 py-2 rounded-pill">Enterprise HR Solution</span>
+                                <small class="text-muted fw-bold">2024</small>
+                            </div>
+                            <h4 class="card-title mb-3 fw-bold">Leave Application System</h4>
+                            <p class="card-text mb-4 text-muted">Intelligent, hierarchy-based digital platform streamlining leave management with automated workflows, smart calculations, and real-time tracking for modern organizations.</p>
+                            <div class="tech-stack mb-4">
+                                <h6 class="text-primary mb-3">Technology Excellence</h6>
+                                <span class="badge bg-light text-primary mb-2">DOT NET AMBASY</span>
+                                <span class="badge bg-light text-primary mb-2">ANGULAR JS</span>
+                                <span class="badge bg-light text-primary mb-2">SQL</span>
+                                <span class="badge bg-light text-primary mb-2">Bootstrap 5</span>
+                            </div>
+                            <div class="solution-type mt-3">
+                                <p class="text-primary mb-1">Project Type</p>
+                                <p class="fw-bold mb-0">WEB APP</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="projects.html" class="btn btn-primary btn-lg">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Preview Section -->
+    <section class="team py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h6 class="text-primary fw-bold">OUR TEAM</h6>
+                    <h2 class="display-5 fw-bold mb-4">Meet Our Experts</h2>
+                    <p class="lead">Our talented team of professionals is dedicated to delivering exceptional results.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <!-- Team Preview Cards -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card text-center" data-aos="fade-up" data-bs-toggle="modal" data-bs-target="#teamModal1" style="cursor: pointer;">
+                        <div class="team-img position-relative overflow-hidden mb-4">
+                            <img src="images/AMIT.jpg" alt="Team Member" class="img-fluid rounded">
+                        </div>
+                        <h5 class="mb-1">AMIT RAJPAT RAJBHAR</h5>
+                        <p class="text-muted mb-0">Founder</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card text-center" data-aos="fade-up" data-aos-delay="100" data-bs-toggle="modal" data-bs-target="#teamModal2" style="cursor: pointer;">
+                        <div class="team-img position-relative overflow-hidden mb-4">
+                            <img src="images/ARYAN.jpg" alt="Team Member" class="img-fluid rounded">
+                        </div>
+                        <h5 class="mb-1">ARYAN AMIT RAJBHAR</h5>
+                        <p class="text-muted mb-0">CO-FOUNDER, CEO</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card text-center" data-aos="fade-up" data-aos-delay="200" data-bs-toggle="modal" data-bs-target="#teamModal3" style="cursor: pointer;">
+                        <div class="team-img position-relative overflow-hidden mb-4">
+                            <img src="images/AMAN.jpg" alt="Team Member" class="img-fluid rounded">
+                        </div>
+                        <h5 class="mb-1">AMAN BRAJESH YADAV</h5>
+                        <p class="text-muted mb-0">PROJECT MANAGER</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card text-center" data-aos="fade-up" data-aos-delay="300" data-bs-toggle="modal" data-bs-target="#teamModal4" style="cursor: pointer;">
+                        <div class="team-img position-relative overflow-hidden mb-4">
+                            <img src="images/new pic 2.jpg" alt="Team Member" class="img-fluid rounded">
+                        </div>
+                        <h5 class="mb-1">AYUSH PRAMOD SINGH</h5>
+                        <p class="text-muted mb-0">UI UX DESIGNER</p>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="team.html" class="btn btn-primary btn-lg">Meet Our Full Team</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Member Modals -->
+    <!-- Modal 1 -->
+    <div class="modal fade" id="teamModal1" tabindex="-1" aria-labelledby="teamModalLabel1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-lg-5 mb-4 mb-lg-0">
+                            <img src="images/AMIT.jpg" alt="AMIT RAJPAT RAJBHAR" class="img-fluid rounded">
+                        </div>
+                        <div class="col-lg-7">
+                            <h3 class="mb-3">AMIT RAJPAT RAJBHAR</h3>
+                            <p class="text-primary fw-bold mb-3">Founder</p>
+                            <p class="lead mb-4">A visionary leader with over 10 years of experience in technology and business development. Specializes in strategic planning and innovative solutions.</p>
+                            <h5 class="mb-3">Expertise</h5>
+                            <div class="mb-4">
+                                <span class="badge bg-light text-primary me-2 mb-2">Strategic Planning</span>
+                                <span class="badge bg-light text-primary me-2 mb-2">Business Development</span>
+                                <span class="badge bg-light text-primary me-2 mb-2">Technology Innovation</span>
+                                <span class="badge bg-light text-primary me-2 mb-2">Team Leadership</span>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://linkedin.com" class="me-3" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://twitter.com" class="me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="mailto:amit@itrammanagement.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2 -->
+    <div class="modal fade" id="teamModal2" tabindex="-1" aria-labelledby="teamModalLabel2" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-lg-5 mb-4 mb-lg-0">
+                            <img src="images/ARYAN.jpg" alt="ARYAN AMIT RAJBHAR" class="img-fluid rounded">
+                        </div>
+                        <div class="col-lg-7">
+                            <h3 class="mb-3">ARYAN AMIT RAJBHAR</h3>
+                            <p class="text-primary fw-bold mb-3">CO-FOUNDER, CEO</p>
+                            <p class="lead mb-4">An innovative leader driving the company's vision and growth. Expert in digital transformation and emerging technologies.</p>
+                            <h5 class="mb-3">Expertise</h5>
+                            <div class="mb-4">
+                                <span class="badge bg-light text-primary me-2 mb-2">Digital Strategy</span>
+                                <span class="badge bg-light text-primary me-2 mb-2">Innovation Management</span>
+                                <span class="badge bg-light text-primary me-2 mb-2">Business Growth</span>
+                                <span class="badge bg-light text-primary me-2 mb-2">Technology Leadership</span>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://linkedin.com" class="me-3" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://twitter.com" class="me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="mailto:aryan@itrammanagement.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3 -->
+    <div class="modal fade" id="teamModal3" tabindex="-1" aria-labelledby="teamModalLabel3" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-lg-5 mb-4 mb-lg-0">
+                            <img src="images/AMAN.jpg" alt="AMAN BRAJESH YADAV" class="img-fluid rounded">
+                        </div>
+                        <div class="col-lg-7">
+                            <h3 class="mb-3">AMAN BRAJESH YADAV</h3>
+                            <p class="text-primary fw-bold mb-3">PROJECT MANAGER</p>
+                            <p class="lead mb-4">Experienced project manager with a strong track record of delivering complex technical projects on time and within budget.</p>
+                            <h5 class="mb-3">Expertise</h5>
+                            <div class="mb-4">
+                                <span class="badge bg-light text-primary me-2 mb-2">Project Management</span>
+                                <span class="badge bg-light text-primary me-2 mb-2">Agile Methodologies</span>
+                                <span class="badge bg-light text-primary me-2 mb-2">Team Coordination</span>
+                                <span class="badge bg-light text-primary me-2 mb-2">Risk Management</span>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://linkedin.com" class="me-3" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://twitter.com" class="me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="mailto:aman@itrammanagement.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4 -->
+    <div class="modal fade" id="teamModal4" tabindex="-1" aria-labelledby="teamModalLabel4" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="row">
+                        <div class="col-lg-5 mb-4 mb-lg-0">
+                            <img src="images/new pic 2.jpg" alt="AYUSH PRAMOD SINGH" class="img-fluid rounded">
+                        </div>
+                        <div class="col-lg-7">
+                            <h3 class="mb-3">AYUSH PRAMOD SINGH</h3>
+                            <p class="text-primary fw-bold mb-3">UI UX DESIGNER</p>
+                            <p class="lead mb-4">Creative designer focused on crafting beautiful and intuitive user experiences. Expert in modern design tools and principles.</p>
+                            <h5 class="mb-3">Expertise</h5>
+                            <div class="mb-4">
+                                <span class="badge bg-light text-primary me-2 mb-2">UI Design</span>
+                                <span class="badge bg-light text-primary me-2 mb-2">UX Research</span>
+                                <span class="badge bg-light text-primary me-2 mb-2">Prototyping</span>
+                                <span class="badge bg-light text-primary me-2 mb-2">Design Systems</span>
+                            </div>
+                            <div class="social-links">
+                                <a href="https://linkedin.com" class="me-3" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                <a href="https://twitter.com" class="me-3" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="mailto:ayush@itrammanagement.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .footer {
+            background-color: var(--bs-dark);
+            color: var(--bs-light);
+            padding: 3rem 0;
+        }
+        .footer h4, .footer h5 {
+            color: white;
+            margin-bottom: 1.5rem;
+        }
+        .footer p {
+            opacity: 0.8;
+        }
+        .footer .social-links a:hover, .footer .social-links a:focus {
+            background: #ff6b00;
+            color: #fff !important;
+            transform: translateY(-3px);
+        }
+        .footer .social-links a:hover i, .footer .social-links a:focus i {
+            color: #fff !important;
+        }
+        .footer ul li a {
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        .footer ul li a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -2px;
+            width: 100%;
+            height: 2px;
+            background: #ff6b00;
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+        .footer ul li a:hover,
+        .footer ul li a:focus {
+            color: #ff6b00 !important;
+        }
+        .footer ul li a:hover::after,
+        .footer ul li a:focus::after {
+            transform: scaleX(1);
+        }
+        .footer hr {
+            opacity: 0.1;
+        }
+        .footer .copyright {
+            opacity: 0.8;
+        }
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+        }
+        [data-aos].aos-animate {
+            opacity: 1;
+        }
+    </style>
+    <footer class="footer bg-dark text-light py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up">
+                    <h4 class="text-white mb-4">ITRAM MANAGEMENT</h4>
+                    <p>Transforming businesses through innovative digital solutions and cutting-edge technology.</p>
+                    <div class="social-links mt-3">
+                        <a href="#" class="text-light" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-light" aria-label="GitHub">
+                            <i class="bi bi-github"></i>
+                        </a>
+                        <a href="#" class="text-light" aria-label="Instagram">
+                            <i class="bi bi-instagram"></i>
+                        </a>
+                        <a href="mailto:itrammanagement@gmail.com" class="text-light" aria-label="Email">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                       
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="index.html" class="text-light text-decoration-none">
+                                <i class="bi bi-chevron-right me-2"></i>Home
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="about.html" class="text-light text-decoration-none">
+                                <i class="bi bi-chevron-right me-2"></i>About
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="services.html" class="text-light text-decoration-none">
+                                <i class="bi bi-chevron-right me-2"></i>Services
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="projects.html" class="text-light text-decoration-none">
+                                <i class="bi bi-chevron-right me-2"></i>Projects
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="team.html" class="text-light text-decoration-none">
+                                <i class="bi bi-chevron-right me-2"></i>Team
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="contact.html" class="text-light text-decoration-none">
+                                <i class="bi bi-chevron-right me-2"></i>Contact
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <h5 class="text-white mb-4">Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="services.html" class="text-light text-decoration-none">
+                                <i class="bi bi-code-slash me-2"></i>Web Development
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="services.html" class="text-light text-decoration-none">
+                                <i class="bi bi-phone me-2"></i>Mobile Apps
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="services.html" class="text-light text-decoration-none">
+                                <i class="bi bi-laptop me-2"></i>IT Consulting
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="services.html" class="text-light text-decoration-none">
+                                <i class="bi bi-cloud-check me-2"></i>Cloud Solutions
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <h5 class="text-white mb-4">Quick Contact</h5>
+                    <p>Need immediate assistance? Send us an email directly.</p>
+                    <a href="mailto:itrammanagement@gmail.com" class="btn btn-primary mt-3">
+                        <i class="bi bi-envelope-fill me-2"></i>Email Us Now
+                    </a>
+                    <div class="mt-4">
+                        <p class="mb-2">
+                            <i class="bi bi-geo-alt-fill me-2"></i>
+                            Mumbai, Maharashtra, India
+                        </p>
+                        <p class="mb-2">
+                            <i class="bi bi-telephone-fill me-2"></i>
+                            +91 123 456 7890
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4 bg-light">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 copyright">
+                        <i class="bi bi-c-circle me-2"></i>2024 ITRAM MANAGEMENT. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-light text-decoration-none me-3">
+                        <i class="bi bi-shield-check me-1"></i>Privacy Policy
+                    </a>
+                    <a href="#" class="text-light text-decoration-none">
+                        <i class="bi bi-file-text me-1"></i>Terms of Service
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- Header and Footer Loaders -->
+    <script src="js/header-loader.js"></script>
+    
+</body>
+</html> 

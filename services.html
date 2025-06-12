@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - ITRAM MANAGEMENT</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="lib/bootstrap/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="lib/fonts/poppins.css" rel="stylesheet">
+    
+    <!-- AOS CSS -->
+    <link href="lib/aos/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .tech-logo {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+            padding: 8px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        .tech-img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        .tech-item:hover .tech-logo {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .tech-icon {
+            transition: all 0.3s ease;
+            width: 80px !important;
+            height: 80px !important;
+        }
+        .tech-icon i {
+            font-size: 2rem !important;
+        }
+        .card:hover .tech-icon {
+            background-color: var(--bs-primary) !important;
+        }
+        .card:hover .tech-icon i {
+            color: white !important;
+        }
+        .tech-item {
+            transition: all 0.3s ease;
+            padding: 12px;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        .tech-item:hover {
+            background-color: rgba(var(--bs-primary-rgb), 0.05);
+        }
+        .tech-item:last-child {
+            margin-bottom: 0;
+        }
+        .tech-stack {
+            padding: 1rem 0;
+        }
+        .tech-icon-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <!--
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/RAM.png" alt="ITRAM Logo" height="40">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="bi bi-house-door"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <i class="bi bi-info-circle"></i> About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">
+                            <i class="bi bi-gear"></i> Services
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">
+                            <i class="bi bi-briefcase"></i> Projects
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="team.html">
+                            <i class="bi bi-people"></i> Team
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">
+                            <i class="bi bi-envelope"></i> Contact
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    -->
+    <!-- Header will be dynamically inserted by header-loader.js -->
+
+    <!-- Hero Section -->
+    <section class="hero min-vh-50 d-flex align-items-center">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up">
+                    <h6 class="text-primary fw-bolder">
+                        <i class="bi bi-stars"></i> OUR SERVICES
+                    </h6>
+                    <h1 class="display-5 fw-bold mb-4">Comprehensive IT Solutions</h1>
+                    <p class="lead mb-4">Explore our wide range of services designed to help your business thrive in the digital age.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+            <div class="row g-4">
+                <!-- Frontend Technologies -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-lg h-100" data-aos="fade-up">
+                        <div class="card-body p-5">
+                            <div class="tech-icon-wrapper">
+                                <div class="tech-icon bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-front text-primary"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 fw-bold mb-4 text-center">Frontend Development</h3>
+                            <div class="tech-stack">
+                                <div class="tech-item d-flex align-items-center">
+                                    <div class="tech-logo me-3">
+                                        <img src="https://angular.io/assets/images/logos/angular/angular.svg" alt="Angular" class="tech-img">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Angular</h5>
+                                        <p class="text-muted mb-0">Modern web applications</p>
+                                    </div>
+                                </div>
+                                <div class="tech-item d-flex align-items-center">
+                                    <div class="tech-logo me-3">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" class="tech-img">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">React</h5>
+                                        <p class="text-muted mb-0">Interactive UI components</p>
+                                    </div>
+                                </div>
+                                <div class="tech-item d-flex align-items-center">
+                                    <div class="tech-logo me-3">
+                                        <img src="https://angular.io/assets/images/logos/angularjs/AngularJS-Shield.svg" alt="AngularJS" class="tech-img">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">AngularJS</h5>
+                                        <p class="text-muted mb-0">Enterprise applications</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend Technologies -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-lg h-100" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-body p-5">
+                            <div class="tech-icon-wrapper">
+                                <div class="tech-icon bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-cpu text-primary"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 fw-bold mb-4 text-center">Backend Development</h3>
+                            <div class="tech-stack">
+                                <div class="tech-item d-flex align-items-center">
+                                    <div class="tech-logo me-3">
+                                        <img src="https://raw.githubusercontent.com/remojansen/logo.ts/master/ts.png" alt="TypeScript" class="tech-img">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">TypeScript</h5>
+                                        <p class="text-muted mb-0">Type-safe development</p>
+                                    </div>
+                                </div>
+                                <div class="tech-item d-flex align-items-center">
+                                    <div class="tech-logo me-3">
+                                        <i class="bi bi-node-plus-fill text-success" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Node.js</h5>
+                                        <p class="text-muted mb-0">Scalable server solutions</p>
+                                    </div>
+                                </div>
+                                <div class="tech-item d-flex align-items-center">
+                                    <div class="tech-logo me-3">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ee/.NET_Core_Logo.svg" alt=".NET Core" class="tech-img">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">.NET Core</h5>
+                                        <p class="text-muted mb-0">Enterprise-grade applications</p>
+                                    </div>
+                                </div>
+                                <div class="tech-item d-flex align-items-center">
+                                    <div class="tech-logo me-3">
+                                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript" class="tech-img">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">JavaScript</h5>
+                                        <p class="text-muted mb-0">Dynamic web solutions</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database Technologies -->
+                <div class="col-lg-4">
+                    <div class="card border-0 shadow-lg h-100" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-body p-5">
+                            <div class="tech-icon-wrapper">
+                                <div class="tech-icon bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-database-check text-primary"></i>
+                                </div>
+                            </div>
+                            <h3 class="h4 fw-bold mb-4 text-center">Database Solutions</h3>
+                            <div class="tech-stack">
+                                <div class="tech-item d-flex align-items-center">
+                                    <div class="tech-logo me-3">
+                                        <i class="bi bi-database-fill-gear text-primary" style="font-size: 2rem;"></i>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">SQL Server</h5>
+                                        <p class="text-muted mb-0">Relational databases</p>
+                                    </div>
+                                </div>
+                                <div class="tech-item d-flex align-items-center">
+                                    <div class="tech-logo me-3">
+                                        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/68/Oracle_SQL_Developer_logo.svg/1200px-Oracle_SQL_Developer_logo.svg.png" alt="Oracle" class="tech-img">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">Oracle</h5>
+                                        <p class="text-muted mb-0">Enterprise databases</p>
+                                    </div>
+                                </div>
+                                <div class="tech-item d-flex align-items-center">
+                                    <div class="tech-logo me-3">
+                                        <img src="https://www.postgresql.org/media/img/about/press/elephant.png" alt="PostgreSQL" class="tech-img">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">PostgreSQL</h5>
+                                        <p class="text-muted mb-0">Advanced SQL features</p>
+                                    </div>
+                                </div>
+                                <div class="tech-item d-flex align-items-center">
+                                    <div class="tech-logo me-3">
+                                        <img src="https://www.mongodb.com/assets/images/global/leaf.png" alt="MongoDB" class="tech-img">
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-1">MongoDB</h5>
+                                        <p class="text-muted mb-0">NoSQL flexibility</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+    <!-- Technology Stack Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row text-center mb-5">
+                <div class="col-lg-8 mx-auto">
+                    <h6 class="text-primary fw-bold">
+                        <i class="bi bi-stack"></i> OUR EXPERTISE
+                    </h6>
+                    <h2 class="display-5 fw-bold mb-4">Technology Stack</h2>
+                    <p class="lead text-muted">Leveraging cutting-edge technologies to deliver robust and scalable solutions</p>
+                    </div>
+                </div>
+    <!-- Services Grid -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <!-- Software Development -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 hover-lift" data-aos="fade-up">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3 p-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="bi bi-code-square fs-3"></i>
+                            </div>
+                            <h4 class="mb-3">Software Development</h4>
+                            <p class="mb-4">Custom software solutions and enterprise applications built with modern technologies.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Enterprise Applications</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Custom Software Solutions</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>API Development</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>System Integration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Development -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 hover-lift" data-aos="fade-up" data-aos-delay="100">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3 p-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="bi bi-globe2 fs-3"></i>
+                            </div>
+                            <h4 class="mb-3">Web Development</h4>
+                            <p class="mb-4">Modern web applications and platforms using cutting-edge technologies.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Full-Stack Development</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Progressive Web Apps</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>E-commerce Platforms</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Web Portals</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database Solutions -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card border-0 shadow-sm h-100 hover-lift" data-aos="fade-up" data-aos-delay="200">
+                        <div class="card-body p-4">
+                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3 p-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                                <i class="bi bi-database-fill fs-3"></i>
+                            </div>
+                            <h4 class="mb-3">Database Solutions</h4>
+                            <p class="mb-4">Comprehensive database design, development, and management services.</p>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Database Design</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Data Migration</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Performance Optimization</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Data Security</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 text-center text-lg-start">
+                    <h2 class="display-6 fw-bold mb-4 text-dark">Ready to Transform Your Business?</h2>
+                    <p class="lead mb-lg-0 text-dark">Let's discuss how our services can help you achieve your goals.</p>
+                </div>
+                <div class="col-lg-4 text-center text-lg-end">
+                    <a href="contact.html" class="btn btn-primary btn-lg">
+                        <i class="bi bi-arrow-right-circle me-2"></i>Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="lib/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="lib/aos/aos.js"></script>
+    <link rel="stylesheet" href="css/footer-animations.css">
+    <script src="js/main.js"></script>
+    <script src="js/header-loader.js"></script>
+    <script src="js/footer-loader.js"></script>
+</body>
+</html> 
