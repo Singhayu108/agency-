@@ -39,19 +39,22 @@
             transition: transform 0.3s ease;
         }
         .tech-item:hover .tech-logo {
-            transform: translateY(-2px);
+            transform: scale(1.1);
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .tech-icon {
-            transition: all 0.3s ease;
             width: 80px !important;
             height: 80px !important;
+            transition: all 0.3s ease;
+            background-color: rgba(255, 102, 0, 0.1) !important;
         }
         .tech-icon i {
             font-size: 2rem !important;
+            color: #ff6600 !important;
         }
         .card:hover .tech-icon {
-            background-color: var(--bs-primary) !important;
+            background-color: #212529 !important;
+            transform: scale(1.1);
         }
         .card:hover .tech-icon i {
             color: white !important;
@@ -63,7 +66,8 @@
             margin-bottom: 1rem;
         }
         .tech-item:hover {
-            background-color: rgba(var(--bs-primary-rgb), 0.05);
+            background-color: rgba(255, 102, 0, 0.05);
+            transform: translateX(10px);
         }
         .tech-item:last-child {
             margin-bottom: 0;
@@ -75,6 +79,36 @@
             display: flex;
             justify-content: center;
             margin-bottom: 2rem;
+        }
+        .card {
+            transform: translateY(0);
+            transition: all 0.3s ease !important;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+        }
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        .card:hover .feature-icon {
+            background: #212529 !important;
+            transform: scale(1.1);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            margin: 0 10px;
+        }
+        .tech-stack {
+            padding: 0.5rem 0;
+        }
+        .tech-icon-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
         }
     </style>
 </head>
@@ -133,26 +167,27 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-8 mx-auto" data-aos="fade-up">
-                    <h6 class="text-primary fw-bolder">
+                    <h6 class="text-primary fw-bolder display-6 mb-3" style="font-size: 2.5rem; letter-spacing: 3px;">
                         <i class="bi bi-stars"></i> OUR SERVICES
                     </h6>
-                    <h1 class="display-5 fw-bold mb-4">Comprehensive IT Solutions</h1>
+                    <h1 class="fw-bold mb-4" style="font-size: 1.8rem; color: #333;">Comprehensive IT Solutions</h1>
                     <p class="lead mb-4">Explore our wide range of services designed to help your business thrive in the digital age.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    
-
-            <div class="row g-4">
+    <!-- Services Grid -->
+    <section class="py-5">
+        <div class="container px-4">
+            <div class="row g-4 px-2">
                 <!-- Frontend Technologies -->
                 <div class="col-lg-4">
-                    <div class="card border-0 shadow-lg h-100" data-aos="fade-up">
-                        <div class="card-body p-5">
+                    <div class="card border-0 shadow-lg h-100" data-aos="fade-up" style="min-height: 450px; transition: all 0.3s ease;">
+                        <div class="card-body p-4">
                             <div class="tech-icon-wrapper">
-                                <div class="tech-icon bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-front text-primary"></i>
+                                <div class="tech-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-front"></i>
                                 </div>
                             </div>
                             <h3 class="h4 fw-bold mb-4 text-center">Frontend Development</h3>
@@ -191,11 +226,11 @@
 
                 <!-- Backend Technologies -->
                 <div class="col-lg-4">
-                    <div class="card border-0 shadow-lg h-100" data-aos="fade-up" data-aos-delay="100">
-                        <div class="card-body p-5">
+                    <div class="card border-0 shadow-lg h-100" data-aos="fade-up" data-aos-delay="100" style="min-height: 450px; transition: all 0.3s ease;">
+                        <div class="card-body p-4">
                             <div class="tech-icon-wrapper">
-                                <div class="tech-icon bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-cpu text-primary"></i>
+                                <div class="tech-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-cpu"></i>
                                 </div>
                             </div>
                             <h3 class="h4 fw-bold mb-4 text-center">Backend Development</h3>
@@ -227,15 +262,6 @@
                                         <p class="text-muted mb-0">Enterprise-grade applications</p>
                                     </div>
                                 </div>
-                                <div class="tech-item d-flex align-items-center">
-                                    <div class="tech-logo me-3">
-                                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/99/Unofficial_JavaScript_logo_2.svg" alt="JavaScript" class="tech-img">
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">JavaScript</h5>
-                                        <p class="text-muted mb-0">Dynamic web solutions</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -243,18 +269,18 @@
 
                 <!-- Database Technologies -->
                 <div class="col-lg-4">
-                    <div class="card border-0 shadow-lg h-100" data-aos="fade-up" data-aos-delay="200">
-                        <div class="card-body p-5">
+                    <div class="card border-0 shadow-lg h-100" data-aos="fade-up" data-aos-delay="200" style="min-height: 450px; transition: all 0.3s ease;">
+                        <div class="card-body p-4">
                             <div class="tech-icon-wrapper">
-                                <div class="tech-icon bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center">
-                                    <i class="bi bi-database-check text-primary"></i>
+                                <div class="tech-icon rounded-circle d-flex align-items-center justify-content-center">
+                                    <i class="bi bi-database-check"></i>
                                 </div>
                             </div>
-                            <h3 class="h4 fw-bold mb-4 text-center">Database Solutions</h3>
+                            <h3 class="h4 fw-bold mb-4 text-center">Database Management</h3>
                             <div class="tech-stack">
                                 <div class="tech-item d-flex align-items-center">
                                     <div class="tech-logo me-3">
-                                        <i class="bi bi-database-fill-gear text-primary" style="font-size: 2rem;"></i>
+                                        <i class="bi bi-database-fill-gear text-dark" style="font-size: 2rem;"></i>
                                     </div>
                                     <div>
                                         <h5 class="mb-1">SQL Server</h5>
@@ -279,15 +305,6 @@
                                         <p class="text-muted mb-0">Advanced SQL features</p>
                                     </div>
                                 </div>
-                                <div class="tech-item d-flex align-items-center">
-                                    <div class="tech-logo me-3">
-                                        <img src="https://www.mongodb.com/assets/images/global/leaf.png" alt="MongoDB" class="tech-img">
-                                    </div>
-                                    <div>
-                                        <h5 class="mb-1">MongoDB</h5>
-                                        <p class="text-muted mb-0">NoSQL flexibility</p>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -296,76 +313,69 @@
         </div>
     </section>
 
-
-    
     <!-- Technology Stack Section -->
     <section class="py-5 bg-light">
         <div class="container">
             <div class="row text-center mb-5">
                 <div class="col-lg-8 mx-auto">
-                    <h6 class="text-primary fw-bold">
+                    <h6 class="text-primary fw-bolder display-6 mb-3" style="font-size: 2.5rem; letter-spacing: 3px;">
                         <i class="bi bi-stack"></i> OUR EXPERTISE
                     </h6>
-                    <h2 class="display-5 fw-bold mb-4">Technology Stack</h2>
+                    <h1 class="fw-bold mb-4" style="font-size: 1.8rem; color: #333;">Technology Stack</h1>
                     <p class="lead text-muted">Leveraging cutting-edge technologies to deliver robust and scalable solutions</p>
-                    </div>
                 </div>
-    <!-- Services Grid -->
-    <section class="py-5">
-        <div class="container">
-            <div class="row g-4">
+            </div>
+            <div class="row g-4 justify-content-center">
                 <!-- Software Development -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 hover-lift" data-aos="fade-up">
+                    <div class="card border-0 shadow-sm h-100" data-aos="fade-up">
                         <div class="card-body p-4">
-                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3 p-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <div class="feature-icon bg-orange text-white rounded-circle mb-3 p-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: #ff6600;">
                                 <i class="bi bi-code-square fs-3"></i>
                             </div>
                             <h4 class="mb-3">Software Development</h4>
                             <p class="mb-4">Custom software solutions and enterprise applications built with modern technologies.</p>
                             <ul class="list-unstyled mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Enterprise Applications</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Custom Software Solutions</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>API Development</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>System Integration</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-dark me-2"></i>Enterprise Applications</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-dark me-2"></i>Custom Software Solutions</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-dark me-2"></i>API Development</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-dark me-2"></i>System Integration</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
                 <!-- Web Development -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 hover-lift" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card border-0 shadow-sm h-100" data-aos="fade-up" data-aos-delay="100">
                         <div class="card-body p-4">
-                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3 p-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <div class="feature-icon bg-orange text-white rounded-circle mb-3 p-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: #ff6600;">
                                 <i class="bi bi-globe2 fs-3"></i>
                             </div>
                             <h4 class="mb-3">Web Development</h4>
                             <p class="mb-4">Modern web applications and platforms using cutting-edge technologies.</p>
                             <ul class="list-unstyled mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Full-Stack Development</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Progressive Web Apps</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>E-commerce Platforms</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Web Portals</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-dark me-2"></i>Full-Stack Development</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-dark me-2"></i>Progressive Web Apps</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-dark me-2"></i>E-commerce Platforms</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-dark me-2"></i>Web Portals</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-
                 <!-- Database Solutions -->
                 <div class="col-md-6 col-lg-4">
-                    <div class="card border-0 shadow-sm h-100 hover-lift" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card border-0 shadow-sm h-100" data-aos="fade-up" data-aos-delay="200">
                         <div class="card-body p-4">
-                            <div class="feature-icon bg-primary bg-gradient text-white rounded-circle mb-3 p-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
+                            <div class="feature-icon bg-orange text-white rounded-circle mb-3 p-3 d-flex align-items-center justify-content-center" style="width: 60px; height: 60px; background: #ff6600;">
                                 <i class="bi bi-database-fill fs-3"></i>
                             </div>
                             <h4 class="mb-3">Database Solutions</h4>
                             <p class="mb-4">Comprehensive database design, development, and management services.</p>
                             <ul class="list-unstyled mb-4">
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Database Design</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Data Migration</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Performance Optimization</li>
-                                <li class="mb-2"><i class="bi bi-check-circle-fill text-primary me-2"></i>Data Security</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-dark me-2"></i>Database Design</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-dark me-2"></i>Data Migration</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-dark me-2"></i>Performance Optimization</li>
+                                <li class="mb-2"><i class="bi bi-check-circle-fill text-dark me-2"></i>Data Security</li>
                             </ul>
                         </div>
                     </div>
